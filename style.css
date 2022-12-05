@@ -1,0 +1,45 @@
+body
+{
+
+    background-image: linear-gradient(163deg,black,white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.search-container
+{
+    position: relative;
+    height: 40px;
+}
+input
+{
+    width: 40px;
+    height: 40px;
+    transition:width .5s ease ;
+}
+button
+{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    transition:transform .5s ease;
+}
+/* to hide the border wich apper onclick */
+input:focus,button:focus
+{
+    outline: none;
+}
+/* the width of the search input after clik the toggle */
+.search-container.active input
+{
+    width: 200px;
+}
+/* the position of the button after clik the toggle */
+.search-container.active button
+{
+    transform: translateX(200px);
+}
